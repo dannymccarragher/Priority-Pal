@@ -2,11 +2,11 @@
 
 This project is in the early phases. 
 
-Additions to Come Soon: 
+**Additions to Come Soon: 
 -Calendar
 -User Authentication
 -Task Priority
--
+-**
 
 
 
