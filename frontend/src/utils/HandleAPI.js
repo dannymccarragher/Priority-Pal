@@ -24,14 +24,15 @@ const addToDo= (text, setText, setToDo) => {
 
 const updateToDo = (toDoId, text, setToDo, setText, setIsUpdating) => {
     axios 
-    .post(`${baseURL}/update`, {id : toDoId})
+    .post(`${baseURL}/update`, {_id : toDoId, text})
     .then((data) => {
         setText("")
-        setIsUpdating(false)
-        getAllToDo(setText)
+        setIsUpdating(false);
+        getAllToDo(setToDo)
     })
     .catch((err) => console.log(err))
 }
+
 
 export {getAllToDo};
 export {addToDo};
