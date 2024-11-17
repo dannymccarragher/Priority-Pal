@@ -33,7 +33,17 @@ const updateToDo = (toDoId, text, setToDo, setText, setIsUpdating) => {
     .catch((err) => console.log(err))
 }
 
+const deleteToDo = (_id, setToDo) => {
+    axios 
+    .post(`${baseURL}/delete`, {_id})
+    .then((data) => {
+        getAllToDo(setToDo)
+    })
+    .catch((err) => console.log(err))
+}
+
 
 export {getAllToDo};
 export {addToDo};
 export{updateToDo};
+export {deleteToDo};
