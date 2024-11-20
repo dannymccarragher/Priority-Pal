@@ -2,12 +2,15 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const AuthRoutes = require("./routes/AuthRoute");
+const cookieParser = require('cookie-parser');
 
 require('dotenv').config({ path: "../.env" });
 
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use(cookieParser()); 
+
 
 // Connect to MongoDB
 mongoose
