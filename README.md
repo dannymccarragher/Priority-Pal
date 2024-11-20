@@ -39,8 +39,3 @@ Priority Pal is a task management application designed to help users organize, p
 
 ---
 
-## **Installation and Setup**
-1. **Clone the Repository:**  
-   ```bash
-   git clone https://github.com/yourusername/priority-pal.git
-   cd priority-pal
