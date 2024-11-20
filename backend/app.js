@@ -65,7 +65,7 @@ app.post('/delete', async (req, res) => {
     }
 });
 
-app.use("/api/auth", AuthRoutes);
+app.use("/", AuthRoutes);
 
 
 const PORT = process.env.PORT || 3000;

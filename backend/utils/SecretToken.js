@@ -1,7 +1,7 @@
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
-module.exports.createSecretToken = (id) => {
+const createSecretToken = (id) => {
   if (!process.env.TOKEN_KEY) {
     throw new Error("TOKEN_KEY is not defined in the environment variables");
   }
@@ -22,3 +22,5 @@ module.exports.verifySecretToken = (token) => {
     return null;
   }
 };
+
+module.exports = {createSecretToken};
