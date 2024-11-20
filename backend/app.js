@@ -1,7 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-require('dotenv').config();
+const AuthRoutes = require("./routes/AuthRoute");
+
+require('dotenv').config({ path: "../.env" });
 
 const app = express();
 app.use(express.json());
@@ -63,7 +65,11 @@ app.post('/delete', async (req, res) => {
     }
 });
 
+app.use("/api/auth", AuthRoutes);
+
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
+
 });
